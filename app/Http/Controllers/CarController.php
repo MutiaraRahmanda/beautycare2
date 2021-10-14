@@ -150,4 +150,16 @@ class CarController extends Controller
         $car->delete();
         return redirect()->back();
     }
+
+    public function doktor()
+    {
+        $cars = Car::all();
+        return view('customers.customercar', compact('cars'));
+    }
+
+    public function detaildoktor($id)
+    {
+        $cars = Car::find([$id]);
+        return view('customers.detailcar', compact('cars'));
+    }
 }

@@ -29,7 +29,7 @@
                         <tr>
                             <th class="font-weight-semi-bold border-top-0 py-2">#</th>
                             <th class="font-weight-semi-bold border-top-0 py-2">Nama Customer</th>
-                            <th class="font-weight-semi-bold border-top-0 py-2">Nama Mobil</th>
+                            <th class="font-weight-semi-bold border-top-0 py-2">Nama Treatment</th>
                             <th class="font-weight-semi-bold border-top-0 py-2">No. HP</th>
                             <th class="font-weight-semi-bold border-top-0 py-2">Tanggal Order</th>
                             <th class="font-weight-semi-bold border-top-0 py-2">Actions</th>
@@ -40,9 +40,9 @@
                             <tr>
                                 <td class="py-3">{{ $loop->iteration }}</td>
                                 <td class="py-3">{{ $transaction->customer->nama }}</td>
-                                <td class="py-3">{{ $transaction->car->nama }}</td>
+                                <td class="py-3">{{ $transaction->brand->nama }}</td>
                                 <td class="py-3">{{ $transaction->customer->no_hp }}</td>
-                                <td class="py-3">{{ $transaction->tanggal_pemesanan }}</td>
+                                <td class="py-3">{{ $transaction->tanggal }}</td>
                                 <td class="py-3">
                                     <div class="position-relative">
                                         <a class="link-dark d-inline-block" href="{{ route('transactions.show', $transaction->id) }}">

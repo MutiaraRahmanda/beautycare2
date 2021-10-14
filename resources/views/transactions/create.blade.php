@@ -22,15 +22,12 @@
             <div class="col-lg-6 col-md-6">
                 <div class="contact__text">
                     <div class="section-title">
-                        <h2>{{ $car->nama }}</h2>
-                        <p>Rp {{ number_format($car->harga, 0, ',', '.') }}</p>
+                        <h2>{{ $brand->nama }}</h2>
+                        <p>Rp {{ number_format($brand->biaya, 0, ',', '.') }}</p>
                     </div>
-                    <ul>
-                        <li><span>Merk:</span> {{ $car->brand->nama }}</li>
-                        <li><span>Tahun:</span> {{ $car->tahun }}</li>
-                        <li><span>Transmisi:</span> {{ $car->transmisi }}</li>
-                        <li><span>Mesin:</span> {{ $car->isi_silinder }} cc</li>
-                        <li><span>Kapasitas:</span> {{ $car->kapasitas }} orang</li>
+                    <ul>    
+                        <li><span>Nama Dokter</span> {{ $car->nama }}</li>
+                        <li><span>Spesialist</span> {{ $car->specialist }}</li>
                     </ul>
                 </div>
             </div>
@@ -48,6 +45,21 @@
                                 <input type="text" name="nama" id="nama">
                             </div>
                         </div>
+
+                        <textarea placeholder="Alamat" name="alamat"></textarea>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="no_hp">No. Telp</label>
+                                <input type="text" name="no_hp" id="no_hp">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                        </div>
+
+                        
                         <div class="row">
                             <div class="col-lg-6">
                                 <label for="jenis_kelamin">Jenis Kelamin</label>
@@ -61,18 +73,28 @@
                                 <input type="date" name="tanggal_lahir" id="tanggal_lahir">
                             </div>
                         </div>
-                        <textarea placeholder="Alamat" name="alamat"></textarea>
+
+
                         <div class="row">
                             <div class="col-lg-6">
-                                <label for="no_hp">No. Telp</label>
-                                <input type="text" name="no_hp" id="no_hp">
+                                <label for="jenis_reservasi">Jenis Reservasi</label>
+                                <select name="jenis_reservasi" id="jenis_reservasi">
+                                    <option value="Treatment">Treatment</option>
+                                    <option value="Konsultasi">Konsultasi</option>
+                                </select>
                             </div>
                             <div class="col-lg-6">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email">
+                                <label for="tanggal">Tanggal</label>
+                                <input type="date" name="tanggal" id="tanggal">
                             </div>
                         </div>
+
+
                         <div class="row">
+                            <div class="col-lg-6">
+                                <label for="waktu">Waktu</label>
+                                <input type="time" name="waktu" id="waktu">
+                            </div>
                             <div class="col-lg-6">
                                 <label for="jenis_pembayaran">Jenis Pembayaran</label>
                                 <select name="jenis_pembayaran" id="jenis_pembayaran">
@@ -80,12 +102,8 @@
                                     <option value="Transfer">Transfer</option>
                                 </select>
                             </div>
-                            <div class="col-lg-6">
-                                <label for="tanggal_pengiriman">Target Tanggal Pengiriman</label>
-                                <input type="date" name="tanggal_pengiriman" id="tanggal_pengiriman">
-                            </div>
                         </div>
-                        <input type="hidden" name="car_id" value="{{ $car->id }}">
+                        <input type="hidden" name="treatment_id" value="{{ $car->id }}">
                         <button type="submit" class="site-btn">Pesan Sekarang</button>
                     </form>
                 </div>
