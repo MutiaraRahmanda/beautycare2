@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Title -->
-    <title>Sistem Showroom Mobil</title>
+    <title>Beauty Care</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,14 +29,17 @@
             <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
                 <!-- Logo For Mobile View -->
                 <a class="navbar-brand navbar-brand-mobile" href="/">
-                    <img class="img-fluid w-100" src="{{ asset('img/logo-mini.png') }}" alt="Graindashboard">
+                    {{-- <img class="img-fluid w-100" src="{{ asset('img/logo-mini.png') }}" alt="Graindashboard"> --}}
+                    <img src ="assets/images/relax.png" width="30px" alt="Graindashboard">
                 </a>
                 <!-- End Logo For Mobile View -->
 
                 <!-- Logo For Desktop View -->
                 <a class="navbar-brand navbar-brand-desktop" href="/">
-                    <img class="side-nav-show-on-closed" src="{{ asset('img/logo-mini.png') }}" alt="Graindashboard" style="width: auto; height: 33px;">
-                    <img class="side-nav-hide-on-closed" src="{{ asset('img/logo.png') }}" alt="Graindashboard" style="width: auto; height: 33px;">
+                    <img class="side-nav-show-on-closed" src ="assets/images/relax.png" width="30px" alt="Graindashboard" style="width: auto; height: 33px;">
+                    {{-- <img class="side-nav-show-on-closed" src="{{ asset('img/logo-mini.png') }}" alt="Graindashboard" style="width: auto; height: 33px;"> --}}
+                    <a><img class="side-nav-hide-on-closed" src ="assets/images/relax.png" width="30px" alt="Graindashboard" style="width: auto; height: 33px;">&nbsp;Beauty Care</a>
+                    {{-- <img class="side-nav-hide-on-closed" src="{{ asset('img/logo.png') }}" alt="Graindashboard" style="width: auto; height: 33px;"> --}}
                 </a>
                 <!-- End Logo For Desktop View -->
             </div>
@@ -131,7 +134,7 @@
                 </div>
             </div>
         </nav>
-    </header> 
+    </header>
 @show
 <!-- End Header -->
 
@@ -190,7 +193,7 @@
                   </span>
                         <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>
                     </a>
-    
+
                     <!-- Transaksi: subTransaksi -->
                     <ul id="subUsers" class="side-nav-menu side-nav-menu-second-level mb-0">
                         <li class="side-nav-menu-item">
@@ -204,7 +207,7 @@
                 </li>
                 <!-- End Transaksi -->
             </ul>
-        </aside>   
+        </aside>
     @show
     <!-- End Sidebar Nav -->
 

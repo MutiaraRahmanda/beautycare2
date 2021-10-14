@@ -56,4 +56,13 @@ class CustomerController extends Controller
         $cars->appends(['brand_id' => $request->merk, 'status' => $request->kondisi, 'transmisi' => $request->transmisi, 'kapasitas' => $request->kapasitas]);
         return view('customers.index', compact('brands', 'cars'));
     }
+
+
+    public function treatments(){
+        return view('customers.customerbrands');
+    }
+
+    public function contact(){
+        return view('customers.contact');
+    }
 }

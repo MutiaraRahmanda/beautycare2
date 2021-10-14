@@ -24,29 +24,28 @@
 </section>
 <!-- Hero Section End -->
 
-<section class="ftco-section ftco-no-pt ftco-no-pb">
-    @foreach ($brands as $brand)
+
+<section class="ftco-section">
     <div class="container">
-        <div class="row no-gutters">
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="offer-deal text-center px-2 px-lg-5" style="width:400px">
-                    <div class="card-body">
-                        <img src="{{ asset('images/' . $brand->image) }}" alt="Card Image" style="width: 262px" height="151px">
-                        <br><br>
-                        <h4 class="mb-4" align="center">{{$brand->nama}}</h4>
-                        <hr />
-                        <p class="mb-5">{{$brand->deskripsi}}</p>
-                        <br>
-                        {{-- <a href="{{ route('treatments.detail', $brand->id) }}"><img src="assets/images/shopping-cart.png" style="width:8%">Detail</a> --}}
-                        {{-- <p><a href="electrocautery" class="btn btn-white px-4 py-3"><img src="assets/images/shopping-cart.png" style="width:8%"> Detail</span></a></p> --}}
+        <div class="row">
+            @foreach ($brands as $brand)
+                <div class="col-lg-3 d-flex">
+                    <div class="coach align-items-stretch">
+                        <div class="card-body" style="height: 40rem">
+                                <img src="{{ asset('storage/' . $brand->image) }}" alt="" style="width: 262px" height="151px">
+                                <br><br>
+                                <h4 class="mb-4" align="center">{{$brand->nama}}</h4>
+                                <hr />
+                                <p class="mb-5">{{$brand->deskripsi}}</p>
+                                <br>
+                                <p><a href="detailbrands/{{$brand->id}}" class="btn btn-white px-4 py-3"><img src="assets/images/shopping-cart.png" style="width:8%"> Detail</span></a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
         </div>
     </div>
-    @endforeach
 </section>
-
 
 
 @endsection

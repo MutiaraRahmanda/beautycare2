@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\Car;
 use Illuminate\Http\Request;
 
 class BrandController extends Controller
@@ -63,9 +64,10 @@ class BrandController extends Controller
      * @param  \App\Models\Brand  $brand
      * @return \Illuminate\Http\Response
      */
-    public function show(Brand $brand)
+    public function show($id)
     {
-        //
+        $brand = Brand::find($id)->paginate(1);
+        return view('customers.detailbrands',compact('brand'));
     }
 
     /**
@@ -137,7 +139,16 @@ class BrandController extends Controller
         return redirect()->back();
     }
 
-    public function treatments(){
-        return view('customers.customerbrands');
+    public function treatments()
+    {
+        $brands = Brand::all();
+        return view('customers.customerbrands', compact('brands'));
     }
+
+    public function detailtreatments($id)
+    {
+        $brands = Brand::find([$id]);
+        return view('customers.detailbrands', compact('brands'));
+    }
+
 }

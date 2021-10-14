@@ -21,10 +21,15 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [CustomerController::class, 'index']);
 Route::get('customerbrands', [BrandController::class, 'treatments']);
+Route::get('contact', [CustomerController::class,'contact']);
+Route::get('detailbrands/{id}', [BrandController::class, 'detailtreatments']);
+Route::get('detailcar/{id}', [CarController::class, 'detaildoktor']);
+Route::get('customercar', [CarController::class, 'doktor']);
 Route::get('/search', [CustomerController::class, 'search'])->name('search');
 Route::get('/filter', [CustomerController::class, 'filter'])->name('filter');
 Route::get('detail/{id}', [CustomerController::class, 'show'])->name('detail');
 Route::get('transactions/{id}/create', [TransactionController::class, 'create'])->name('transactions.create');
+
 Route::post('transactions', [TransactionController::class, 'store'])->name('transactions.store');
 Route::get('transactions/{id}/bukti', [TransactionController::class, 'bukti'])->name('transactions.bukti');
 
@@ -41,4 +46,5 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('transactions/{id}', [TransactionController::class, 'show'])->name('transactions.show');
     Route::put('transactions/{id}', [TransactionController::class, 'update'])->name('transactions.update');
     Route::get('transactions/{id}/nota', [TransactionController::class, 'cetakNota'])->name('transactions.nota');
+    Route::get('transactions/create/{id}', [TransactionController::class, 'create'])->name('transactions.create');
 });
