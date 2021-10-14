@@ -145,10 +145,10 @@
         <h1>NOTA PEMBELIAN</h1>
         <div id="identity">
             <div id="company" class="clearfix">
-                <div>Grain Showroom</div>
-                <div>Jalanin Aja Dulu,<br /> Kali Aja, Jodoh</div>
+                <div>Beauty Care</div>
+                <div>Sistem Reservasi<br />Layanan Treatment</div>
                 <div>(+62) 858 8224 5529</div>
-                <div><a href="mailto:grain-showroom@gmail.com">grain-showroom@gmail.com</a></div>
+                <div><a href="mailto:beautycare@gmail.com">beautycare@gmail.com</a></div>
             </div>
             <div id="project">
                 <div><span>NO. NOTA</span> {{ $transaction->no_nota }}</div>
@@ -156,8 +156,7 @@
                 <div><span>ALAMAT</span> {{ $transaction->customer->alamat }}</div>
                 <div><span>NO. TELP.</span> {{ $transaction->customer->no_hp }}</div>
                 <div><span>EMAIL</span> <a href="mailto:{{ $transaction->customer->email }}">{{ $transaction->customer->email }}</a></div>
-                <div><span>TANGGAL ORDER</span> {{ date("d F Y", strtotime($transaction->tanggal_pemesanan)) }}</div>
-                <div><span>TANGGAL PENGIRIMAN</span> {{ date("d F Y", strtotime($transaction->tanggal_pengiriman)) }}</div>
+                <div><span>TANGGAL ORDER</span> {{ date("d F Y", strtotime($transaction->tanggal)) }}</div>
             </div>
         </div>
     </header>
@@ -165,22 +164,22 @@
         <table>
             <thead>
                 <tr>
-                    <th class="service">NAMA MOBIL</th>
-                    <th>HARGA</th>
+                    <th class="service">NAMA TREATMENT</th>
+                    <th>BIAYA</th>
                     <th>JUMLAH</th>
                     <th>TOTAL</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="service">{{ $transaction->car->nama }}</td>
-                    <td class="unit">Rp {{ number_format($transaction->car->harga, 0, ',', '.') }}</td>
+                    <td class="service">{{ $transaction->brand->nama }}</td>
+                    <td class="unit">Rp {{ number_format($transaction->brand->biaya, 0, ',', '.') }}</td>
                     <td class="qty">1</td>
-                    <td class="total">Rp {{ number_format($transaction->car->harga, 0, ',', '.') }}</td>
+                    <td class="total">Rp {{ number_format($transaction->brand->biaya, 0, ',', '.') }}</td>
                 </tr>
                 <tr>
                     <td colspan="3" class="grand total">TOTAL</td>
-                    <td class="grand total">Rp {{ number_format($transaction->car->harga, 0, ',', '.') }}</td>
+                    <td class="grand total">Rp {{ number_format($transaction->brand->biaya, 0, ',', '.') }}</td>
                 </tr>
             </tbody>
         </table>

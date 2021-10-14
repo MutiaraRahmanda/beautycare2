@@ -17,10 +17,11 @@ class Transaction extends Model
     protected $fillable = [
         'no_nota',
         'customer_id',
-        'car_id',
-        'tanggal_pemesanan',
-        'tanggal_pengiriman',
+        'treatment_id',
+        'jenis_reservasi',
         'jenis_pembayaran',
+        'tanggal',
+        'waktu',
         'status',
     ];
 

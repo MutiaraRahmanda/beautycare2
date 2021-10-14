@@ -32,8 +32,8 @@
                             <div class="col-lg-6">
                                 <address>
                                 <strong>Perusahaan:</strong><br>
-                                    Grain Showroom<br>
-                                    Jalanin Aja Dulu, Siapa Tau Jodoh<br>
+                                    Beauty Care<br>
+                                    Sistem Reservasi Layanan Treatment<br>
                                     (+62) 858 8224 5529
                                 </address>
                             </div>
@@ -56,7 +56,7 @@
                             <div class="col-lg-6 text-right">
                                 <address>
                                     <strong>Tanggal Pemesanan:</strong><br>
-                                    {{ date("d F Y", strtotime($transaction->tanggal_pemesanan)) }}<br>
+                                    {{ date("d F Y", strtotime($transaction->tanggal)) }}<br>
                                 </address>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                             <div class="col-lg-6 text-right">
                                 <address>
                                     <strong>Tanggal Pengiriman:</strong><br>
-                                    {{ date("d F Y", strtotime($transaction->tanggal_pengiriman)) }}<br>
+                                    {{ date("d F Y", strtotime($transaction->tanggal)) }}<br>
                                 </address>
                             </div>
                         </div>
@@ -88,24 +88,24 @@
                                     <table class="table table-condensed">
                                         <thead>
                                             <tr>
-                                                <td><strong>Nama Mobil</strong></td>
-                                                <td class="text-center"><strong>Harga</strong></td>
+                                                <td><strong>Nama Treatment</strong></td>
+                                                <td class="text-center"><strong>Biaya</strong></td>
                                                 <td class="text-center"><strong>Jumlah</strong></td>
                                                 <td class="text-right"><strong>Total</strong></td>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>{{ $transaction->car->nama . ' ' . $transaction->car->tahun }}</td>
-                                                <td class="text-center">Rp {{ number_format($transaction->car->harga, 0, ',', '.') }}</td>
+                                                <td>{{ $transaction->brand->nama}}</td>
+                                                <td class="text-center">Rp {{ number_format($transaction->brand->biaya, 0, ',', '.') }}</td>
                                                 <td class="text-center">1</td>
-                                                <td class="text-right">Rp {{ number_format($transaction->car->harga, 0, ',', '.') }}</td>
+                                                <td class="text-right">Rp {{ number_format($transaction->brand->biaya, 0, ',', '.') }}</td>
                                             </tr>
                                             <tr>
                                                 <td class="no-line"></td>
                                                 <td class="no-line"></td>
                                                 <td class="no-line text-center"><strong>Total</strong></td>
-                                                <td class="no-line text-right">Rp {{ number_format($transaction->car->harga, 0, ',', '.') }}</td>
+                                                <td class="no-line text-right">Rp {{ number_format($transaction->brand->biaya, 0, ',', '.') }}</td>
                                             </tr>
                                         </tbody>
                                     </table>

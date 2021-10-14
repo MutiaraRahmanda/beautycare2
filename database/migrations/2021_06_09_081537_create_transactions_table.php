@@ -11,20 +11,23 @@ class CreateTransactionsTable extends Migration
      *
      * @return void
      */
+
+
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->string('no_nota')->unique();
             $table->unsignedBigInteger('customer_id');
-            $table->unsignedBigInteger('car_id');
-            $table->date('tanggal_pemesanan');
-            $table->date('tanggal_pengiriman');
+            $table->unsignedBigInteger('treatment_id');
+            $table->string('jenis_reservasi');
             $table->string('jenis_pembayaran');
+            $table->date('tanggal');
+            $table->time('waktu');
             $table->string('status');
             $table->timestamps();
             $table->foreign('customer_id')->references('id')->on('customers');
-            $table->foreign('car_id')->references('id')->on('cars');
+            $table->foreign('treatment_id')->references('id')->on('cars');
         });
     }
 
