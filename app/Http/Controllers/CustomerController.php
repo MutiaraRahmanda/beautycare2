@@ -15,10 +15,11 @@ class CustomerController extends Controller
         return view('customers.index', compact('brands', 'cars'));
     }
 
+
     public function show($id)
     {
         $car = Car::with('brand')->where('id', $id)->first();
-        return view('customers.detail', compact('car'));
+        return view('customers.detail', compact('brands', 'car'));
     }
 
     public function search(Request $request)

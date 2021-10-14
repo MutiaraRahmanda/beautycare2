@@ -94,7 +94,7 @@ class BrandController extends Controller
             'deskripsi' => 'required',
             'image' => 'required',
             'biaya' => 'required',
-           
+
         ]);
 
         $brand = Brand::find($id);
@@ -135,5 +135,9 @@ class BrandController extends Controller
         $brand = Brand::find($id);
         $brand->delete();
         return redirect()->back();
+    }
+
+    public function treatments(){
+        return view('customers.customerbrands');
     }
 }

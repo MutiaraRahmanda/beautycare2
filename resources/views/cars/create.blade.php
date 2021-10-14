@@ -21,7 +21,7 @@
                 </ol>
             </nav>
             <!-- End Breadcrumb -->
-            
+
             <div class="mb-3 mb-md-4 d-flex justify-content-between">
                 <div class="h3 mb-0">Form Dokter Baru</div>
             </div>
@@ -44,10 +44,10 @@
                             <input type="text" class="form-control" id="specialist" name="specialist">
                         </div>
                     </div>
-                 
+
                     <div class="form-row">
-                    <div class="form-group col-12 col-md-6">
-                            <label for="image">Foto</label>
+                        <div class="form-group col-12 col-md-12">
+                            <label for="image">Gambar</label>
                             <input type="file" class="form-control" id="image" name="image">
                         </div>
                     </div>

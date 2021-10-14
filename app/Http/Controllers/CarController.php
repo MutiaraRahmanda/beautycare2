@@ -44,24 +44,31 @@ class CarController extends Controller
             'specialist' => 'required',
             'image' => 'required',
             'jadwal' => 'required',
-          
+
         ]);
 
         if ($request->file('image')) {
             $image_name = $request->file('image')->store('images', 'public');
         }
 
-        $car = new Car;
-        $car->nama = $request->get('nama');
-        $car->specialist = $request->get('specialist');
-        $car->image = $request->get('image');
-        $car->jadwal = $request->get('jadwal');
-       
+        // $car = new Car;
+        // $car->nama = $request->get('nama');
+        // $car->specialist = $request->get('specialist');
+        // $car->image_name = $request->get('image');
+        // $car->jadwal = $request->get('jadwal');
+
+        Car::create([
+            'nama' => $request->nama,
+            'specialist' => $request->specialist,
+            'image' => $image_name,
+            'jadwal' => $request->jadwal,
+        ]);
+
        /* $brand = new Brand;
-        $brand->id = $request->get('brand_id'); 
+        $brand->id = $request->get('brand_id');
 
         $car->brand()->associate($brand); */
-        $car->save(); 
+        // $car->save();
 
         return redirect()->route('cars.index');
     }
@@ -123,7 +130,7 @@ class CarController extends Controller
         }
 
        /* $brand = new Brand;
-        $brand->id = $request->get('brand_id'); 
+        $brand->id = $request->get('brand_id');
 
         $car->brand()->associate($brand); */
         $car->save();

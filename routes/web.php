@@ -6,6 +6,7 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\TransactionController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +20,14 @@ use App\Http\Controllers\TransactionController;
 */
 
 Route::get('/', [CustomerController::class, 'index']);
+Route::get('customerbrands', [BrandController::class, 'treatments']);
 Route::get('/search', [CustomerController::class, 'search'])->name('search');
 Route::get('/filter', [CustomerController::class, 'filter'])->name('filter');
 Route::get('detail/{id}', [CustomerController::class, 'show'])->name('detail');
 Route::get('transactions/{id}/create', [TransactionController::class, 'create'])->name('transactions.create');
 Route::post('transactions', [TransactionController::class, 'store'])->name('transactions.store');
 Route::get('transactions/{id}/bukti', [TransactionController::class, 'bukti'])->name('transactions.bukti');
+
 
 Auth::routes();
 
