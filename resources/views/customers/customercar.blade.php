@@ -29,8 +29,9 @@
                     <div class="coach align-items-stretch">
                         <div class="card-body">
                             <img src="{{ asset('storage/' . $car->image) }}" alt="" style="width: 262px" height="151px">
-                            <span class="subheading">{{$car->specialist}}</span>
-                            <h3>{{$car->nama}}</h3>
+                            <br><br>
+                            <h6 class="subheading" style="color: white" >{{$car->specialist}}</span></h6>
+                            <h5>{{$car->nama}}</h5>
                             <br>
                             <p><a href="detailcar/{{$car->id}}" class="btn btn-white px-4 py-3">Detail</span></a></p>
                         </div>

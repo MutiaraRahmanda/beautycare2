@@ -31,7 +31,7 @@
             @foreach ($brands as $brand)
                 <div class="col-lg-3 d-flex">
                     <div class="coach align-items-stretch">
-                        <div class="card-body">
+                        <div class="card-body" style="height: 40rem">
                                 <img src="{{ asset('storage/' . $brand->image) }}" alt="" style="width: 262px" height="151px">
                                 <br><br>
                                 <h4 class="mb-4" align="center">{{$brand->nama}}</h4>
