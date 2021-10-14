@@ -61,4 +61,8 @@ class CustomerController extends Controller
     public function treatments(){
         return view('customers.customerbrands');
     }
+
+    public function contact(){
+        return view('customers.contact');
+    }
 }

@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [CustomerController::class, 'index']);
 Route::get('customerbrands', [BrandController::class, 'treatments']);
+Route::get('contact', [CustomerController::class,'contact']);
 Route::get('detailbrands/{id}', [BrandController::class, 'detailtreatments']);
 Route::get('detailcar/{id}', [CarController::class, 'detaildoktor']);
 Route::get('customercar', [CarController::class, 'doktor']);

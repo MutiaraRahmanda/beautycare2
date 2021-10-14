@@ -102,7 +102,7 @@
                                     <li><a href="/" class="nav-link" style="color: black">Home</a></li>
                                     <li><a href="customerbrands" class="nav-link" style="color: black">Treatments</a></li>
                                     <li><a href="customercar" class="nav-link" style="color: black">Doctor</a></li>
-                                    <li><a href="" class="nav-link" style="color: black">Contact</a></li>
+                                    <li><a href="contact" class="nav-link" style="color: black">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
