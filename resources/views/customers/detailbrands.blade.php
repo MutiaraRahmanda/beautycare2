@@ -8,12 +8,12 @@
             @foreach ($brands as $brand)
                 <div class="col-md-4 contact-info ftco-animate">
                     <div class="row">
-                    <img src="{{ asset('storage/' . $brand->image) }}" alt="" style="width: 262px" height="151px">
+                    <img class="mb-4" src="{{ asset('storage/' . $brand->image) }}" alt="" style="padding-left: 20%">
                     </div>
                     <br>
-                    <p class="mb-4" align="center">Price</p>
-                    <h2>{{$brand->harga}}</h2>
-                    <hr />
+                    <p class="mb-4" align="center" style="padding-left: 20%">Price</p>
+                    <h2 align="center" style="padding-left: 20%">{{$brand->biaya}}</h2>
+                   
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-6 ftco-animate">

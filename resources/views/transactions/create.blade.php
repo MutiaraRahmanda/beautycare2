@@ -2,15 +2,16 @@
 
 @section('content')
 <!-- Breadcrumb End -->
+<section>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="breadcrumb__text">
-                    <h2>Form Reservasi</h2>
-                </div>
+            <div class="col-lg-12">
+                    <br><br>
+                    <h1>Form Reservasi</h1>
             </div>
         </div>
     </div>
+</section>
 
 <!-- Breadcrumb Begin -->
 
@@ -72,6 +73,7 @@
                                 </select>
                             </div>
                         </div>
+                        <br>
                         <div class="row">
                             <div class="col-lg-6">
                                 <label for="waktu">Waktu</label>
@@ -84,8 +86,8 @@
                         </div>
                         {{-- <input type="hidden" name="car_id" value="{{ $car->id }}">
                         <input type="hidden" name="brand_id" value="{{ $brand->id }}"> --}}
-                        {{-- <a href="{{ route('transactions.nota') }}" class="primary-btn"> --}}
-                            <button type="submit" class="site-btn">Pesan Sekarang</button>
+                        {{-- <a href="{{ route('transactions.invoice', $id) }}" class="primary-btn"> --}}
+                        <a href="transactions.history"><button type="submit" class="site-btn">Pesan Sekarang</button>
                     </form>
                 </div>
             </div>

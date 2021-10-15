@@ -22,7 +22,7 @@
             <div class="row block-9">
                 <div class="col-md-4 contact-info ftco-animate">
                     <div class="row">
-                        <img src="{{ asset('storage/' . $car->image) }}" alt="" style="width: 262px" height="151px">
+                        <img src="{{ asset('storage/' . $car->image) }}" alt="" style="padding-left: 20%">
                     </div>
                     <br>
                 </div>
