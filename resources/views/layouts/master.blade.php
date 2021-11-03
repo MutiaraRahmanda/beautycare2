@@ -28,10 +28,7 @@
         <nav class="navbar flex-nowrap p-0">
             <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
                 <!-- Logo For Mobile View -->
-                <a class="navbar-brand navbar-brand-mobile" href="/">
-                    {{-- <img class="img-fluid w-100" src="{{ asset('img/logo-mini.png') }}" alt="Graindashboard"> --}}
-                    <img src ="assets/images/relax.png" width="30px" alt="Graindashboard">
-                </a>
+
                 <!-- End Logo For Mobile View -->
 
                 <!-- Logo For Desktop View -->
@@ -151,50 +148,50 @@
                 <li class="side-nav-menu-item">
                     <a class="side-nav-menu-link media align-items-center" href="{{ route('dashboard') }}">
                 <span class="side-nav-menu-icon d-flex mr-3">
-                    <i class="gd-dashboard"></i>
+                    {{-- <i class="gd-dashboard"></i> --}}
                 </span>
                         <span class="side-nav-fadeout-on-closed media-body">Dashboard</span>
                     </a>
                 </li>
                 <!-- End Dashboard -->
 
-                <!-- Data Merk Mobil -->
+
                 <li class="side-nav-menu-item">
                     <a class="side-nav-menu-link media align-items-center" href="{{ route('brands.index') }}">
                 <span class="side-nav-menu-icon d-flex mr-3">
-                    <i class="gd-tag"></i>
+                    {{-- <i class="gd-tag"></i> --}}
                 </span>
                         <span class="side-nav-fadeout-on-closed media-body">Data Treatment</span>
                     </a>
                 </li>
-                <!-- End Data Merk Mobil -->
 
-                <!-- Data Mobil -->
+
+
                 <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link media align-items-center" href="{{ route('cars.index') }}">
+                    <a class="side-nav-menu-link media align-items-center" href="{{ route('dokters.index') }}">
                 <span class="side-nav-menu-icon d-flex mr-3">
-                    <i class="gd-car"></i>
+                    {{-- <i class="gd-doctor"></i> --}}
                 </span>
                         <span class="side-nav-fadeout-on-closed media-body">Data Dokter</span>
                     </a>
                 </li>
-                <!-- End Data Mobil -->
+               
 
                 <!-- Transaksi -->
-                <li class="side-nav-menu-item side-nav-has-menu">
+                 {{-- <li class="side-nav-menu-item side-nav-has-menu">
                     <a class="side-nav-menu-link media align-items-center" href="#"
                        data-target="#subUsers">
                       <span class="side-nav-menu-icon d-flex mr-3">
                         <i class="gd-credit-card"></i>
                       </span>
-                        <span class="side-nav-fadeout-on-closed media-body">Transaksi</span>
-                        <span class="side-nav-control-icon d-flex">
-                    <i class="gd-angle-right side-nav-fadeout-on-closed"></i>
+                      <span><a href="">Form Reservasi</span>
+                        {{-- <span class="side-nav-control-icon d-flex"> --}}
+                    {{-- <i class="gd-angle-right side-nav-fadeout-on-closed"></i> --}}
                   </span>
                         <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>
                     </a>
 
-                    <!-- Transaksi: subTransaksi -->
+                    {{-- <!-- Transaksi: subTransaksi -->
                     <ul id="subUsers" class="side-nav-menu side-nav-menu-second-level mb-0">
                         <li class="side-nav-menu-item">
                             <a class="side-nav-menu-link" href="{{ route('transactions.order') }}">Data Pesanan</a>
@@ -202,7 +199,7 @@
                         <li class="side-nav-menu-item">
                             <a class="side-nav-menu-link" href="{{ route('transactions.history') }}">Riwayat Transaksi</a>
                         </li>
-                    </ul>
+                    </ul> --}}
                     <!-- End Transaksi: subTransaksi -->
                 </li>
                 <!-- End Transaksi -->
@@ -235,7 +232,7 @@
                     </div>
 
                     <div class="col-lg text-center text-lg-right">
-                        &copy; 2019 Graindashboard. All Rights Reserved.
+                        &copy; 2021 Beauty Care. All Rights Reserved.
                     </div>
                 </div>
             </footer>

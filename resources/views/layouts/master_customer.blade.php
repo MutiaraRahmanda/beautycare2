@@ -55,35 +55,6 @@
 </head>
 
 <body>
-    <!-- Page Preloder -->
-    {{-- <div id="preloder">
-        <div class="loader"></div>
-    </div> --}}
-
-    <!-- Offcanvas Menu Begin -->
-    {{-- <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__logo">
-            <a href="/"><img src="{{ asset('img/logo.png') }}" alt=""></a>
-        </div>
-        <div id="mobile-menu-wrap"></div>
-        <ul class="offcanvas__widget__add">
-            <li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
-            <li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
-        </ul>
-        <div class="offcanvas__phone__num">
-            <i class="fa fa-phone"></i>
-            <span>(+12) 345 678 910</span>
-        </div>
-        <div class="offcanvas__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-google"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-        </div>
-    </div> --}}
-    <!-- Offcanvas Menu End -->
-
     <!-- Header Section Begin -->
     <header class="header">
         <div class="header__top">
@@ -100,7 +71,7 @@
                                 <ul class="header__top__widget">
                                     <li><a href="/" class="nav-link" style="color: black">Home</a></li>
                                     <li><a href="customerbrands" class="nav-link" style="color: black">Treatments</a></li>
-                                    <li><a href="customercar" class="nav-link" style="color: black">Doctor</a></li>
+                                    <li><a href="customerdokter" class="nav-link" style="color: black">Doctor</a></li>
                                     <li><a href="contact" class="nav-link" style="color: black">Contact</a></li>
                                 </ul>
                             </div>

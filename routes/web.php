@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CarController;
+use App\Http\Controllers\DokterController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CustomerController;
@@ -23,8 +23,8 @@ Route::get('/', [CustomerController::class, 'index']);
 Route::get('customerbrands', [BrandController::class, 'treatments']);
 Route::get('contact', [CustomerController::class,'contact']);
 Route::get('detailbrands/{id}', [BrandController::class, 'detailtreatments']);
-Route::get('detailcar/{id}', [CarController::class, 'detaildoktor']);
-Route::get('customercar', [CarController::class, 'doktor']);
+Route::get('detaildokter/{id}', [DokterController::class, 'detaildoktor']);
+Route::get('customerdokter', [DokterController::class, 'doktor']);
 Route::get('/search', [CustomerController::class, 'search'])->name('search');
 Route::get('/filter', [CustomerController::class, 'filter'])->name('filter');
 Route::get('detail/{id}', [CustomerController::class, 'show'])->name('detail');
@@ -38,7 +38,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::resource('cars', CarController::class);
+    Route::resource('dokters', DokterController::class);
     Route::resource('brands', BrandController::class);
     Route::get('transactions/create/{id}', [TransactionController::class, 'create'])->name('transactions.create');
     Route::get('transactions/order', [TransactionController::class, 'order'])->name('transactions.order');

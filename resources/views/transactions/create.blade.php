@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="contact__form">
-                    <form action="{{ route('transactions.store') }}" method="POST">
+                    {{-- <form action="{{ route('transactions.store') }}" method="POST">
                         @csrf
                         <div class="row">
                             <div class="col-lg-6">
@@ -83,11 +83,13 @@
                                 <label for="tanggal_reservasi">Tanggal Reservasi</label>
                                 <input type="date" name="tanggal_reservasi" id="tanggal_reservasi">
                             </div>
-                        </div>
+                        </div> --}}
                         {{-- <input type="hidden" name="car_id" value="{{ $car->id }}">
                         <input type="hidden" name="brand_id" value="{{ $brand->id }}"> --}}
                         {{-- <a href="{{ route('transactions.invoice', $id) }}" class="primary-btn"> --}}
-                        <a href="transactions.history"><button type="submit" class="site-btn">Pesan Sekarang</button>
+                        <h3>Jika anda tertarik tehadap layanan kami,Silahkan klik tombol di bawah ini</h3>
+                        <br>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScCRoyvXdJyu6J31OHzf4_ZY_3fYggx5p3s1Lo7a3ybSd2ADw/viewform"><button type="submit" class="site-btn">Pesan Sekarang</button>
                     </form>
                 </div>
             </div>

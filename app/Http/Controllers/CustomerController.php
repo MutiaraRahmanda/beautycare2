@@ -4,57 +4,57 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Brand;
-use App\Models\Car;
+use App\Models\Dokter;
 
 class CustomerController extends Controller
 {
     public function index()
     {
         $brands = Brand::all();
-        $cars = Car::paginate(9);
-        return view('customers.index', compact('brands', 'cars'));
+        $dokters = Dokter::paginate(9);
+        return view('customers.index', compact('brands', 'dokters'));
     }
 
 
     public function show($id)
     {
-        $car = Car::with('brand')->where('id', $id)->first();
-        return view('customers.detail', compact('brands', 'car'));
+        $dokter = Dokter::with('brand')->where('id', $id)->first();
+        return view('customers.detail', compact('brands', 'dokter'));
     }
 
     public function search(Request $request)
     {
         $brands = Brand::all();
         $keyword = $request->keyword;
-        $cars = Car::where('nama', 'like', '%' . $keyword . '%')->paginate(9);
-        $cars->appends(['keyword' => $keyword]);
-        return view('customers.index', compact('brands', 'cars'))->with('i', (request()->input('page', 1) - 1) * 5);
+        $dokters = Dokter::where('nama', 'like', '%' . $keyword . '%')->paginate(9);
+        $dokters->appends(['keyword' => $keyword]);
+        return view('customers.index', compact('brands', 'dokters'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function filter(Request $request)
     {
         $brands = Brand::all();
 
-        $car = (new Car())->newQuery();
+        $dokter = (new Dokter())->newQuery();
 
         if ($request->merk != '') {
-            $car->where('brand_id', $request->merk);
+            $dokter->where('brand_id', $request->merk);
         }
 
         if ($request->kondisi != '') {
-            $car->where('status', $request->kondisi);
+            $dokter->where('status', $request->kondisi);
         }
 
         if ($request->transmisi != '') {
-            $car->where('transmisi', $request->transmisi);
+            $dokter->where('transmisi', $request->transmisi);
         }
 
         if ($request->kapasitas != '') {
-            $car->where('kapasitas', $request->kapasitas);
+            $dokter->where('kapasitas', $request->kapasitas);
         }
-        $cars = $car->paginate(9);
-        $cars->appends(['brand_id' => $request->merk, 'status' => $request->kondisi, 'transmisi' => $request->transmisi, 'kapasitas' => $request->kapasitas]);
-        return view('customers.index', compact('brands', 'cars'));
+        $dokters = $dokter->paginate(9);
+        $dokters->appends(['brand_id' => $request->merk, 'status' => $request->kondisi, 'transmisi' => $request->transmisi, 'kapasitas' => $request->kapasitas]);
+        return view('customers.index', compact('brands', 'dokters'));
     }
 
 

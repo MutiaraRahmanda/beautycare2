@@ -30,8 +30,8 @@ class Transaction extends Model
         return $this->belongsTo(Customer::class);
     }
 
-    public function car()
+    public function dokter()
     {
-        return $this->belongsTo(Car::class);
+        return $this->belongsTo(Dokter::class);
     }
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Brand extends Model
+class Dokter extends Model
 {
     use HasFactory;
 
@@ -16,13 +16,18 @@ class Brand extends Model
      */
     protected $fillable = [
         'nama',
-        'deskripsi',
+        'specialist',
         'image',
-        'biaya',
+        'jadwal',
     ];
 
-    public function dokters()
+    public function brand()
     {
-        return $this->hasMany(Dokter::class);
+        return $this->belongsTo(Brand::class);
+    }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
     }
 }

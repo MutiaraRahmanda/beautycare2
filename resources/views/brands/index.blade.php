@@ -18,13 +18,12 @@
                 </ol>
             </nav>
             <!-- End Breadcrumb -->
-            
+
             <div class="mb-3 mb-md-4 d-flex justify-content-between">
                 <a href="{{ route('brands.create') }}" class="btn btn-primary btn-sm"><i class="gd-plus"></i> Tambah Treatment Baru</a>
             </div>
 
 
-            <!-- Cars -->
             <div class="table-responsive-xl">
                 <table class="table mb-0">
                     <thead>
@@ -65,7 +64,6 @@
                     </tbody>
                 </table>
             </div>
-            <!-- End Cars -->
         </div>
     </div>
 </div>

@@ -27,7 +27,7 @@ class CreateTransactionsTable extends Migration
             $table->string('status');
             $table->timestamps();
             $table->foreign('customer_id')->references('id')->on('customers');
-            $table->foreign('treatment_id')->references('id')->on('cars');
+            $table->foreign('treatment_id')->references('id')->on('dokters');
         });
     }
 

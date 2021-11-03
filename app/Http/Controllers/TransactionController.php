@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Transaction;
-use App\Models\Car;
+use App\Models\Dokter;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use PDF;
@@ -34,8 +34,8 @@ class TransactionController extends Controller
      */
     public function create($id)
     {
-        $car = Car::with('brand')->where('id', $id)->first();
-        return view('transactions.create', compact('car'));
+        $dokter = Dokter::with('brand')->where('id', $id)->first();
+        return view('transactions.create', compact('dokter'));
     }
 
     /**
@@ -71,7 +71,7 @@ class TransactionController extends Controller
         $transaction = new Transaction;
         $transaction->no_nota = 'GR'.date('ymdhis');
         $transaction->customer_id = $customer->id;
-        $transaction->car_id = $request->car_id;
+        $transaction->dokter_id = $request->dokter_id;
         $transaction->tanggal_pemesanan = date('Y-m-d');
         $transaction->tanggal_pengiriman = $request->tanggal_pengiriman;
         $transaction->jenis_pembayaran = $request->jenis_pembayaran;
@@ -139,7 +139,7 @@ class TransactionController extends Controller
         $pdf = PDF::loadview('transactions.bukti', compact('transaction'));
         return $pdf->download();
     }
-    
+
     public function cetakNota($id)
     {
         $transaction = Transaction::find($id);
